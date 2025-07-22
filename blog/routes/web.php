@@ -2,6 +2,8 @@
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
+use App\Http\Controllers\HomePage;
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -13,6 +15,8 @@
 |
 */
 
-$router->get('/', function () use ($router) {
+Route::get('/',[HomePage::class,'show']);
+
+$router->get('/test', function () use ($router) {
     return $router->app->version();
 });

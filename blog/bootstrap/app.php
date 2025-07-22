@@ -19,6 +19,7 @@ date_default_timezone_set(env('APP_TIMEZONE', 'UTC'));
 |
 */
 
+
 $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
@@ -37,6 +38,7 @@ $app = new Laravel\Lumen\Application(
 | your own bindings here if you like or you can make another file.
 |
 */
+
 
 if (env('APP_DEBUG')) {
  $app->register(Barryvdh\Debugbar\LumenServiceProvider::class);
